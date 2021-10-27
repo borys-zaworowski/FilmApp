@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<ul>
+    {% for item in object_list %}
+        <li>{{ item }} <a href="{{ item.edit_url }}">Edit</a> <a href="{{ item.details_url }}">Details</a> </li>
+    {% endfor %}
+</ul>
+{% endblock %}

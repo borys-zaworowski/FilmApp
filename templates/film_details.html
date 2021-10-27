@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <ul>
+        <li>Added by: {{ film.added_by }}</li>
+        <li>Name: {{ film.name }}</li>
+        <li>Year: {{ film.year }}</li>
+        <li>Director: {{ film.director }}</li>
+        <li>Genre: {{ film.genre }}</li>
+        <li>Short description: {{ film.description }}</li>
+        <li>
+            <ul>
+                {% for comment in comments %}
+                    <li>{{ comment }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+    </ul>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add comment</button>
+    </form>
+{% endblock %}
