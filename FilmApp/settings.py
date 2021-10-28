@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'FilmApp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'filmapp',
-        'USER': 'postgres',
-        'PASSWORD': 'leopard',
-        'PORT': '5432',
-        'HOST': 'localhost'
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'PORT': '',
+        'HOST': ''
     }
 }
 
